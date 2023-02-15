@@ -2,7 +2,7 @@ import styles from './index.module.css';
 import { type NextPage } from 'next';
 import Head from 'next/head';
 import Navbar from '../components/navbar/Navbar';
-import PageContainer from '../components/common/positioning/PageContainer';
+import HomePage from '../components/home/HomePage';
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <PageContainer>Home</PageContainer>
+      <HomePage />
     </>
   );
 };
