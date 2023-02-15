@@ -1,0 +1,36 @@
+@import '../Variables.scss';
+
+.footer {
+  display: flex;
+  gap: 30px;
+  margin-top: auto;
+}
+
+.icon {
+  padding: 10px;
+  border: solid grey 2px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity $transition;
+
+  &.github {
+    &:hover {
+      background: linear-gradient(135deg, #6f00c7, #000000);
+      opacity: 1;
+    }
+  }
+
+  &.linkedin {
+    &:hover {
+      background: linear-gradient(135deg, #0077b5, #00a0dc);
+      opacity: 1;
+    }
+  }
+
+  &.email {
+    &:hover {
+      background: linear-gradient(135deg, #ff0000, #ff8c00);
+      opacity: 1;
+    }
+  }
+}

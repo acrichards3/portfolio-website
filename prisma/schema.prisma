@@ -6,12 +6,13 @@ generator client {
 }
 
 datasource db {
-    provider = "mysql"
+    provider     = "mysql"
     // NOTE: When using postgresql, mysql or sqlserver, uncomment the @db.Text annotations in model Account below
     // Further reading:
     // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
     // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
-    url      = env("DATABASE_URL")
+    relationMode = "prisma"
+    url          = env("DATABASE_URL")
 }
 
 model Example {
@@ -32,6 +33,17 @@ model Project {
     stack       String
 }
 
+model Experience {
+    id          String @id @default(cuid())
+    image       String @db.LongText
+    title       String
+    description String @db.Text
+    company     String
+    location    String
+    to          String
+    from        String
+}
+
 model Post {
     id          String   @id @default(cuid())
     createdAt   DateTime @default(now())
@@ -39,6 +51,14 @@ model Post {
     title       String
     description String
     image       String
+}
+
+model Contact {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    name      String
+    email     String
+    message   String   @db.LongText
 }
 
 // Necessary for Next auth

@@ -1,0 +1,26 @@
+@import '../Variables.scss';
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  letter-spacing: 0.5px;
+  font-size: 42px;
+}
+
+.text {
+  font-size: medium;
+  text-align: center;
+}
+
+.line {
+  width: $line-width;
+  height: 1px;
+  background-color: $white-text-hover;
+  margin: 20px 0;
+}
