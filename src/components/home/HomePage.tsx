@@ -10,7 +10,7 @@ export default function HomePage() {
     <PageContainer>
       <MainCircleImage src={pfp} alt="Profile" size="large" />
       <div className={styles.textArea}>
-        <h1 className={styles.title}>Hello, I'm Alex!</h1>
+        <h1 className={styles.title}>{"Hello, I'm Alex!"}</h1>
         <p className={styles.text}>
           I am a software engineer, who thrives on continuously learning new
           things to enhance my skills and create innovative solutions. With a

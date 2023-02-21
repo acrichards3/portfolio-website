@@ -11,23 +11,23 @@ import styles from './Footer.module.scss';
 export default function Footer() {
   return (
     <div className={styles.footer}>
-      <p className={styles.text}>Let's Connect</p>
+      <p className={styles.text}>{"Let's Connect"}</p>
       <div className={styles.iconArea}>
-        <div className={classNames(styles.iconContainer, styles.github)}>
-          <Link href="https://github.com/acrichards3" target="_blank">
+        <Link href="https://github.com/acrichards3" target="_blank">
+          <div className={classNames(styles.iconContainer, styles.github)}>
             <GitHub className={styles.icon} />
-          </Link>
-        </div>
-        <div className={classNames(styles.iconContainer, styles.linkedin)}>
-          <Link href="https://www.linkedin.com/in/acrichards3/" target="_blank">
+          </div>
+        </Link>
+        <Link href="https://www.linkedin.com/in/acrichards3/" target="_blank">
+          <div className={classNames(styles.iconContainer, styles.linkedin)}>
             <Linkedin className={styles.icon} />
-          </Link>
-        </div>
-        <div className={classNames(styles.iconContainer, styles.email)}>
-          <Link href="mailto:alexchristopherrichards@gmail.com">
+          </div>
+        </Link>
+        <Link href="mailto:alexchristopherrichards@gmail.com">
+          <div className={classNames(styles.iconContainer, styles.email)}>
             <Mail className={styles.icon} />
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
