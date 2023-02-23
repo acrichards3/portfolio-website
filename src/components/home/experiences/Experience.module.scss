@@ -1,0 +1,29 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.title {
+  font-size: 36px;
+  margin: 0;
+}
+.imgArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  &.right {
+    flex-direction: row-reverse;
+  }
+}
+.titleTime {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.subTitle {
+  font-size: 24px;
+  margin: 0;
+}
