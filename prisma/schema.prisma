@@ -35,7 +35,6 @@ model Project {
 
 model Experience {
     id          String @id @default(cuid())
-    image       String @db.LongText
     title       String
     description String @db.Text
     company     String

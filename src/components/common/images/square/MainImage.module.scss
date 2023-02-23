@@ -1,0 +1,14 @@
+.mainImage {
+  object-fit: cover;
+  height: fit-content;
+
+  &.small {
+    width: 200px;
+  }
+  &.medium {
+    width: 250px;
+  }
+  &.large {
+    width: 300px;
+  }
+}
