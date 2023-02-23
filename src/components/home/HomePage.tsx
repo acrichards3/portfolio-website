@@ -33,6 +33,7 @@ export default function HomePage() {
           {exp?.map((item, index) => {
             return (
               <Experience
+                key={item.id}
                 orientation={index % 2 === 0 ? 'left' : 'right'}
                 item={item}
                 index={index}
