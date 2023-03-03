@@ -11,6 +11,7 @@ interface MainButtonProps {
   isLink?: boolean;
   href?: string;
   variant?: Variant;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export default function MainButton(props: MainButtonProps) {
@@ -25,6 +26,7 @@ export default function MainButton(props: MainButtonProps) {
     </Link>
   ) : (
     <button
+      type={props.type}
       className={classNames(styles.button, {
         [styles.github as string]: props.variant === 'Github',
       })}

@@ -1,0 +1,42 @@
+@import '../Variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.text {
+  text-align: center;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  transition: $transition;
+  gap: 30px;
+
+  &:hover {
+    filter: grayscale(30%);
+  }
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 30px;
+}
+.input {
+  flex: 1;
+  padding: 10px;
+}
+.textArea {
+  flex: 1;
+  min-height: 150px;
+  padding: 10px;
+  resize: none;
+}
