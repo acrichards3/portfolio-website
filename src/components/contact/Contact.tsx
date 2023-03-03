@@ -19,9 +19,7 @@ export default function Contact() {
 
   console.log('SERVICE_ID', SERVICE_ID);
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ): Promise<void> => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -31,24 +29,21 @@ export default function Contact() {
       message: message,
     };
 
-    try {
-      const response: EmailJSResponseStatus = await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        data,
-        PUBLIC_KEY
-      );
-      setSent(true);
-      console.log('SUCCESS!', response.status, response.text);
-    } catch (error) {
-      console.log('FAILED:', error);
-    }
-
-    setIsLoading(false);
-    setName('');
-    setEmail('');
-    setMessage('');
-    return undefined;
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY)
+      .then((response: EmailJSResponseStatus) => {
+        setSent(true);
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((error) => {
+        console.log('FAILED:', error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+        setName('');
+        setEmail('');
+        setMessage('');
+      });
   };
 
   return (
