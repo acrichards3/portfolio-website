@@ -4,6 +4,7 @@ import { StaticImageData } from 'next/image';
 import { stackItems } from '../../../data/stackItems';
 import Link from 'next/link';
 import MainImage from '../../common/images/square/MainImage';
+import MainButton from '../../common/buttons/MainButton';
 import styles from './ProjectCard.module.scss';
 
 interface ProjectCardProps {
@@ -57,6 +58,19 @@ export default function ProjectCard(props: ProjectCardProps) {
             throw new Error(`Stack item: ${item} not found`);
           })}
         </div>
+      </div>
+      <div className={styles.links}>
+        {props.github === 'N/A' ? null : (
+          <MainButton
+            text="Github Repo"
+            isLink
+            href={props.github}
+            variant="Github"
+          />
+        )}
+        {props.url === 'N/A' ? null : (
+          <MainButton text="Visit Project" isLink href={props.url} />
+        )}
       </div>
     </div>
   );
