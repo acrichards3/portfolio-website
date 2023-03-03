@@ -4,11 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 10px;
   border: 1px solid $grey-border;
   border-radius: 15px;
   transition: $transition;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   background: $button-background;
