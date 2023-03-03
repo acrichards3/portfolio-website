@@ -22,15 +22,14 @@ model Example {
 }
 
 model Project {
-    id          String @id @default(cuid())
-    createdAt   String
-    updatedAt   String
+    id          Int    @id @default(autoincrement())
+    from        String
+    to          String
     name        String
-    description String
+    description String @db.LongText
     url         String
-    image       String
     github      String
-    stack       String
+    stackItems  String // Separated by commas
 }
 
 model Experience {

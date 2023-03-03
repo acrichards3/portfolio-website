@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './AboutHeader.module.scss';
+import styles from './ProjectHeader.module.scss';
 
-interface AboutHeaderProps {
+interface ProjectHeaderProps {
   title: string;
 }
 
-export default function AboutHeader(props: AboutHeaderProps) {
+export default function ProjectHeader(props: ProjectHeaderProps) {
   return (
     <div className={styles.head}>
       <h1 className={styles.title}>{props.title}</h1>

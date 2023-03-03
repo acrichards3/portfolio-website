@@ -17,7 +17,9 @@ export default function HomePage() {
 
   return (
     <PageContainer>
-      <MainCircleImage src={pfp} alt="Profile" size="large" />
+      <div className={styles.head}>
+        <MainCircleImage src={pfp} alt="Profile" size="large" />
+      </div>
       <TextArea title={`Alex Richards`} head>
         <p className={styles.text}>
           I am a software engineer, who thrives on continuously learning new
