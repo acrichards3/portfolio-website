@@ -16,7 +16,7 @@ export default function Projects() {
     <div className={styles.projects}>
       {projects.map((project, index) => {
         const stackArray: string[] = project.stackItems.split(', ');
-        const images = [Portfolio, Chess, SharpenMyAxe, Medium]; // yeah this is hacky but I really dont care enough to fix it
+        const images = [Portfolio, Chess, SharpenMyAxe, Medium]; // yeeee this is hacky but I really dont care enough to fix it
         return (
           <ProjectCard
             key={project.id}
