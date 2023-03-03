@@ -19,7 +19,9 @@ export default function Contact() {
 
   console.log('SERVICE_ID', SERVICE_ID);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
     setIsLoading(true);
 
