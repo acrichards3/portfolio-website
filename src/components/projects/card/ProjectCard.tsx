@@ -33,13 +33,14 @@ export default function ProjectCard(props: ProjectCardProps) {
       <div className={styles.stack}>
         <p className={styles.stackHead}>Technologies Used</p>
         <div className={styles.stackContainer}>
-          {props.stack.map((item) => {
+          {props.stack.map((item, index) => {
             const source = stackItems.find(
               (stackItem) => item === stackItem.stackItem
             );
             if (source) {
               return (
                 <Link
+                  key={index}
                   className={styles.stackArea}
                   href={source.href}
                   target="_"
