@@ -48,6 +48,7 @@ export default function Contact() {
     setName('');
     setEmail('');
     setMessage('');
+    return Promise.resolve();
   };
 
   return (
