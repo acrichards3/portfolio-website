@@ -6,11 +6,12 @@ import styles from './MainImage.module.scss';
 interface MainImageProps {
   src: string | StaticImageData | undefined;
   alt: string;
-  size: 'small' | 'medium' | 'large';
+  size: 'x-small' | 'small' | 'medium' | 'large';
 }
 
 export default function MainImage(props: MainImageProps) {
   const classes = classNames(styles.mainImage, {
+    [styles.xSmall as string]: props.size === 'x-small',
     [styles.small as string]: props.size === 'small',
     [styles.medium as string]: props.size === 'medium',
     [styles.large as string]: props.size === 'large',

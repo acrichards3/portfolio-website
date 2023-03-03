@@ -2,6 +2,9 @@
   object-fit: cover;
   height: fit-content;
 
+  &.xSmall {
+    width: 50px;
+  }
   &.small {
     width: 200px;
   }
