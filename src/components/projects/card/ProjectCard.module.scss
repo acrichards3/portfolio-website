@@ -8,6 +8,7 @@
   border: 1px solid $project-border;
   flex: 1;
   border-radius: 15px;
+  gap: 10px;
 }
 .title {
   display: flex;
@@ -15,9 +16,11 @@
   justify-content: center;
 }
 .image {
-  max-width: 300px;
-  flex: 1;
+  max-width: 320px;
+  height: auto;
   border: solid 1px $grey-border;
+  object-fit: cover;
+  transition: $transition;
 }
 .description {
   text-align: center;
@@ -36,8 +39,10 @@
 .stackContainer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  flex-basis: 48%;
+  gap: 40px;
 }
 .stackArea {
   display: flex;
@@ -60,6 +65,23 @@
 .links {
   display: flex;
   justify-content: center;
+  margin-top: auto;
+  top: 0;
   padding-top: 30px;
   gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .image {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1620px) {
+  .card {
+    display: flex;
+  }
+  .image {
+    max-width: 700px;
+  }
 }

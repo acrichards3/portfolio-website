@@ -6,7 +6,7 @@ import styles from './MainImage.module.scss';
 interface MainImageProps {
   src: string | StaticImageData | undefined;
   alt: string;
-  size: 'x-small' | 'small' | 'medium' | 'large';
+  size?: 'x-small' | 'small' | 'medium' | 'large';
 }
 
 export default function MainImage(props: MainImageProps) {

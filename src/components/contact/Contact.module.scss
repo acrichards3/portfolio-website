@@ -40,3 +40,19 @@
   padding: 10px;
   resize: none;
 }
+
+@media (min-width: 768px) {
+  .contactForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .input {
+    min-width: 700px;
+  }
+  .textArea {
+    min-width: 700px;
+    min-height: 200px;
+  }
+}

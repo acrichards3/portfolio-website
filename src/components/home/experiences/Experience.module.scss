@@ -27,3 +27,9 @@
   font-size: 24px;
   margin: 0;
 }
+
+@media (min-width: 768px) {
+  .title {
+    font-weight: bold;
+  }
+}
