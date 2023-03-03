@@ -16,36 +16,40 @@ export default function HomePage() {
   const imgArr = [Senzit, Nucamp];
 
   return (
-    <PageContainer>
-      <div className={styles.head}>
-        <MainCircleImage src={pfp} alt="Profile" size="large" />
-      </div>
-      <TextArea title={`Alex Richards`} head>
-        <p className={styles.text}>
-          I am a software engineer, who thrives on continuously learning new
-          things to enhance my skills and create innovative solutions. With a
-          strong foundation in software development, I am committed to
-          delivering high-quality, user-centered solutions that exceed
-          expectations and drive business growth.
-        </p>
-      </TextArea>
-      <hr className={styles.line} />
-      <TextArea title={`Experience`}>
-        <div className={styles.experiences}>
-          {exp?.map((item, index) => {
-            return (
-              <Experience
-                key={item.id}
-                orientation={index % 2 === 0 ? 'left' : 'right'}
-                item={item}
-                index={index}
-                imgSrc={imgArr[index]}
-              />
-            );
-          })}
+    <PageContainer className={styles.pageContainer}>
+      <div className={styles.container}>
+        <div className={styles.rowWrapper}>
+          <div className={styles.head}>
+            <MainCircleImage src={pfp} alt="Profile" size="large" />
+          </div>
+          <TextArea title={`Alex Richards`} head>
+            <p className={styles.text}>
+              I am a software engineer, who thrives on continuously learning new
+              things to enhance my skills and create innovative solutions. With
+              a strong foundation in software development, I am committed to
+              delivering high-quality, user-centered solutions that exceed
+              expectations and drive business growth.
+            </p>
+          </TextArea>
         </div>
-      </TextArea>
-      <Footer />
+        <hr className={styles.line} />
+        <TextArea title={`Experience`}>
+          <div className={styles.experiences}>
+            {exp?.map((item, index) => {
+              return (
+                <Experience
+                  key={item.id}
+                  orientation={index % 2 === 0 ? 'left' : 'right'}
+                  item={item}
+                  index={index}
+                  imgSrc={imgArr[index]}
+                />
+              );
+            })}
+          </div>
+        </TextArea>
+        <Footer />
+      </div>
     </PageContainer>
   );
 }

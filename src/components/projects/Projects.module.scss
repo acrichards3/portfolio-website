@@ -4,3 +4,12 @@
   padding-top: 30px;
   gap: 20px;
 }
+
+@media (min-width: 768px) {
+  .projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+}

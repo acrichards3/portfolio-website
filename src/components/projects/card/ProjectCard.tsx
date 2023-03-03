@@ -24,11 +24,13 @@ export default function ProjectCard(props: ProjectCardProps) {
       <div className={styles.title}>{props.name}</div>
       <div>{`${props.from} - ${props.to}`}</div>
       {props.image ? (
-        <Image
-          className={styles.image}
-          src={props.image}
-          alt="Project Preview"
-        />
+        <Link href={props.url !== 'N/A' ? props.url : '/'} target="_blank">
+          <Image
+            className={styles.image}
+            src={props.image}
+            alt="Project Preview"
+          />
+        </Link>
       ) : null}
       <p className={styles.description}>{props.description}</p>
       <div className={styles.stack}>

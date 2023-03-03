@@ -8,9 +8,11 @@ interface SectionProps {
 
 export default function Section(props: SectionProps) {
   return (
-    <div className={styles.section}>
-      <h2 className={styles.title}>{props.title}</h2>
-      <p>{props.children}</p>
+    <div className={styles.rowContainer}>
+      <div className={styles.section}>
+        <h2 className={styles.title}>{props.title}</h2>
+        <p>{props.children}</p>
+      </div>
     </div>
   );
 }
