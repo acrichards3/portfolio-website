@@ -36,7 +36,7 @@ export default function Experience(props: ExperienceProps) {
           >{`${props.item.from} - ${props.item.to}`}</p>
         </div>
       </div>
-      <p>{props.item.description}</p>
+      <p className={styles.desc}>{props.item.description}</p>
     </div>
   );
 }
