@@ -5,6 +5,13 @@
   gap: 20px;
 }
 
+.spinnderDiv {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   .projects {
     flex-direction: row;

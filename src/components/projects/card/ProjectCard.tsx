@@ -5,6 +5,7 @@ import { stackItems } from '../../../data/stackItems';
 import Link from 'next/link';
 import MainImage from '../../common/images/square/MainImage';
 import MainButton from '../../common/buttons/MainButton';
+import MainSpinner from '../../common/spinners/MainSpinner';
 import styles from './ProjectCard.module.scss';
 
 interface ProjectCardProps {
@@ -19,6 +20,12 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
+  const [loaded, setLoaded] = React.useState(false);
+
+  const handleLoad = () => {
+    setLoaded(true);
+  };
+
   return (
     <div className={styles.card}>
       <div className={styles.title}>{props.name}</div>
@@ -26,6 +33,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       {props.image ? (
         <Link href={props.url !== 'N/A' ? props.url : '/'} target="_blank">
           <Image
+            onLoad={handleLoad}
             className={styles.image}
             src={props.image}
             alt="Project Preview"

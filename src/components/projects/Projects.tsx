@@ -33,6 +33,8 @@ export default function Projects() {
       })}
     </div>
   ) : (
-    <MainSpinner />
+    <div className={styles.spinnerDiv}>
+      <MainSpinner />
+    </div>
   );
 }
