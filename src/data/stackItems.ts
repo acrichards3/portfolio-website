@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 import TypeScript from '../images/stackItems/typescript.png';
 import JavaScript from '../images/stackItems/javascript.png';
+import NodeJS from '../images/stackItems/node.png';
 import ReactLogo from '../images/stackItems/react.png';
 import NextJS from '../images/stackItems/next.png';
 import tRPC from '../images/stackItems/trpc.png';
@@ -34,6 +35,7 @@ export const stackItems: StackItem[] = [
     image: JavaScript,
     href: 'https://www.javascript.com/',
   },
+  { stackItem: 'NodeJS', image: NodeJS, href: 'https://nodejs.org/en/' },
   { stackItem: 'React', image: ReactLogo, href: 'https://reactjs.org/' },
   { stackItem: 'NextJS', image: NextJS, href: 'https://nextjs.org/' },
   { stackItem: 'tRPC', image: tRPC, href: 'https://trpc.io/' },
